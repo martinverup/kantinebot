@@ -1,0 +1,19 @@
+config: 
+ menuplan: 
+  link: "https://issmenuplan.dk/Kundelink?GUID=[PLACE GUID HERE]"
+ slack: 
+  token: "[PLACE SLACK TOKEN HERE]"
+  channel: "[PLACE SLACK CHENNEL HERE]"
+  icon: ":shallow_pan_of_food:"
+ sleep: 600
+ mapping:
+  "Ko": ":cow2:"
+  "Fisk": ":fish:"
+  "Kylling": ":chicken:"
+  "Gris": ":pig2:"
+  "Kalkun": ":turkey:"
+  "Kalv": ":cow:"
+  "Chili": ":hot_pepper:"
+  "Garlic": ":garlic:" # Custom
+  "Alkohol": ":wine_glass:"
+  "Vildt": ":deer:"
