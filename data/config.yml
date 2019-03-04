@@ -17,3 +17,4 @@ config:
   "Garlic": ":garlic:" # Custom
   "Alkohol": ":wine_glass:"
   "Vildt": ":deer:"
+  "And": ":duck:"
