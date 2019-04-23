@@ -71,8 +71,8 @@ while(True):
             if menu:
                 message = str('*' + day + '*\n' + menu)
                 slack.chat.post_message(channel, message, icon_emoji=icon)
-                if index == 0:
-                    db.insert({today: menu})
+            if index == 0:
+                db.insert({today: menu})
         continue
 
     if weekday < 5:
