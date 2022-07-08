@@ -7,5 +7,5 @@ docker build -t kantine .
 
 ## Run
 ```
-docker run kantine
+docker run --rm kantine
 ```
