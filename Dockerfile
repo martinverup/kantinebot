@@ -1,13 +1,16 @@
 FROM alpine:latest
 
-COPY . /home
-
 WORKDIR /home
 
-RUN apk add --no-cache python3 python3-dev tzdata \
-    && pip3 install -r requirements.txt \
-    && cp /usr/share/zoneinfo/Europe/Copenhagen /etc/localtime \
-    && apk del --no-cache python3-dev tzdata \
-    && rm requirements.txt Dockerfile
+COPY requirements.txt .
+COPY today.py .
 
-CMD ["python3", "kantine.py"]
+RUN apk add --no-cache python3 py3-pip \
+    && pip install -r requirements.txt \
+    && apk del --no-cache py3-pip \
+    && rm requirements.txt
+
+ARG LINK="https://issmenuplan.dk/Kundelink?GUID=fec3896c-cc3f-47f8-ac77-74826a4ae4e9"
+ENV LINK=$LINK
+
+CMD ["python3", "today.py"]
